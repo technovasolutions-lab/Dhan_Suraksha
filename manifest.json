@@ -1,0 +1,21 @@
+{
+  "name": "Dhan Suraksha",
+  "short_name": "DSuraksha",
+  "description": "Your Trusted Partner in Precious Metal Saving",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "5.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "5.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

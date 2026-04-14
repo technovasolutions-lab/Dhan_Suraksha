@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Calculator — Dhan Suraksha</title>
+  <meta name="description"
+    content="Calculate your future gold and silver savings. See how small monthly contributions grow into significant wealth with Dhan Suraksha.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ticker.css">
+  <script src="ticker.js" defer></script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- PWA & iOS Optimization -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Dhan Suraksha">
+  <link rel="apple-touch-icon" href="5.jpeg">
+  <!-- Google AdSense Verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3718242560343418"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- LIVE PRICE TICKER -->
+  <div class="ticker-bar">
+    <div class="ticker-content" id="ticker-content">
+      <!-- Content populated by ticker.js -->
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <img src="png.png" alt="Dhan Suraksha Logo">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <div class="mobile-menu-header">
+          <img src="png.png" alt="Dhan Suraksha Logo">
+        </div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="why-us.html">Why Us</a>
+        <a href="calculator.html" class="active">Calculator</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://wa.me/919099422402?text=Hi%2C%20I%20am%20interested%20in%20Dhan%20Suraksha%20savings%20plan"
+          target="_blank" class="btn-cta">
+          📞 Start Saving
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== SAVINGS CALCULATOR ========== -->
+  <section class="calculator section-padding first-section reveal active" id="calculator">
+    <div class="container">
+      <span class="section-label">Savings Calculator</span>
+      <h2 class="section-title">Plan Your <span class="gold-text">Precious Metal
+          Wealth</span></h2>
+      <p class="section-subtitle">See how your monthly savings can
+        grow into substantial wealth over time.</p>
+
+      <div class="calc-container" style="margin-top: 0;">
+        <div class="calc-group">
+          <label for="calcAmount">Monthly Savings Amount (₹)</label>
+          <input type="number" id="calcAmount" placeholder="e.g. 1000" min="1000" step="500" value="1000">
+        </div>
+        <div class="calc-group">
+          <label for="calcMonths">Savings Duration</label>
+          <select id="calcMonths">
+            <option value="6">6 Months</option>
+            <option value="12" selected>1 Year (12 Months)</option>
+            <option value="24">2 Years (24 Months)</option>
+            <option value="36">3 Years (36 Months)</option>
+            <option value="60">5 Years (60 Months)</option>
+            <option value="120">10 Years (120 Months)</option>
+          </select>
+        </div>
+        <div class="calc-group">
+          <label for="calcMetal">Metal Type</label>
+          <select id="calcMetal">
+            <option value="gold">Gold (24K Purity)</option>
+            <option value="silver">Silver (999.9 Purity)</option>
+          </select>
+        </div>
+        <button class="btn-cta" onclick="calculateSavings()" id="calc-btn" style="width:100%;justify-content:center;">
+          ✨ Calculate My Savings
+        </button>
+        <div class="calc-result" id="calcResult">
+          <h3>Your Total Savings</h3>
+          <div class="amount" id="calcTotalAmount">₹0</div>
+          <p class="sub-text" id="calcDetails"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="png.png" alt="Dhan Suraksha Logo">
+          <p>Your Trusted Partner in Precious Metal Saving. Start saving from just ₹1,000/month and own real gold &
+            silver — not paper assets.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/919099422402" target="_blank" aria-label="WhatsApp" id="footer-whatsapp">💬</a>
+            <a href="tel:+919099422402" aria-label="Call" id="footer-phone">📞</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="why-us.html">Why Dhan Suraksha</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Gold Savings</a></li>
+            <li><a href="services.html">Silver Savings</a></li>
+            <li><a href="services.html">Family Wealth Plan</a></li>
+            <li><a href="calculator.html">Savings Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="https://wa.me/919099422402" target="_blank">💬 WhatsApp / Call</a></li>
+            <li><a href="mailto:team.dhansuraksha@gmail.com">✉️ Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Dhan Suraksha. All Rights Reserved.</span>
+        <span>Powered By <a href="http://www.technovasolutions.in" target="_blank"
+            style="color: var(--gold); font-weight: 600;">TechNova Solutions</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+  <a href="https://wa.me/919099422402?text=Hi%2C%20I%20am%20interested%20in%20Dhan%20Suraksha%20savings" target="_blank"
+    class="whatsapp-float" id="whatsapp-float-btn" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
